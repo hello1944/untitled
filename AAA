@@ -1,0 +1,61 @@
+# -*- coding: utf-8 -*-
+
+###########################################################################
+## Python code generated with wxFormBuilder (version Jun 17 2015)
+## http://www.wxformbuilder.org/
+##
+## PLEASE DO "NOT" EDIT THIS FILE!
+###########################################################################
+
+import wx
+import wx.xrc
+
+
+###########################################################################
+## TS11_Result1
+###########################################################################
+
+class TS11_Result1(wx.Frame):
+
+    def __init__(self, parent):
+        wx.Frame.__init__(self, parent, id=wx.ID_ANY, title=wx.EmptyString, pos=wx.DefaultPosition,
+                          size=wx.Size(361, 200), style=wx.DEFAULT_FRAME_STYLE | wx.TAB_TRAVERSAL)
+
+        self.SetSizeHintsSz(wx.DefaultSize, wx.DefaultSize)
+
+        bSizer1 = wx.BoxSizer(wx.VERTICAL)
+
+        self.m_dirPicker1 = wx.DirPickerCtrl(self, wx.ID_ANY, wx.EmptyString, u"Select a folder", wx.DefaultPosition,
+                                             wx.DefaultSize, wx.DIRP_DEFAULT_STYLE)
+        bSizer1.Add(self.m_dirPicker1, 1, wx.EXPAND | wx.ALL, 5)
+
+        self.m_button1 = wx.Button(self, wx.ID_ANY, u"开始统计", wx.DefaultPosition, wx.DefaultSize, 0)
+        self.m_button1.SetDefault()
+        bSizer1.Add(self.m_button1, 1, wx.ALL | wx.EXPAND, 5)
+
+        self.m_gauge1 = wx.Gauge(self, wx.ID_ANY, 100, wx.DefaultPosition, wx.DefaultSize, wx.GA_HORIZONTAL)
+        self.m_gauge1.SetValue(0)
+        self.m_gauge1.SetBackgroundColour(wx.SystemSettings.GetColour(wx.SYS_COLOUR_WINDOW))
+
+        bSizer1.Add(self.m_gauge1, 1, wx.EXPAND | wx.ALL, 5)
+
+        self.SetSizer(bSizer1)
+        self.Layout()
+
+        self.Centre(wx.BOTH)
+
+        # Connect Events
+        self.m_dirPicker1.Bind(wx.EVT_DIRPICKER_CHANGED, self.m_dirPicker1OnDirChanged)
+        self.m_button1.Bind(wx.EVT_BUTTON, self.m_button1OnButtonClick)
+
+    def __del__(self):
+        pass
+
+    # Virtual event handlers, overide them in your derived class
+    def m_dirPicker1OnDirChanged(self, event):
+        event.Skip()
+
+    def m_button1OnButtonClick(self, event):
+        event.Skip()
+
+
